@@ -21,5 +21,9 @@ This website will document my learning and projects throughout the semester.
 
 www.linkedin.com/in/allison-haynes-86942a38a
 
+***
+
+[Projects]()
+
 
 

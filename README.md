@@ -1,3 +1,4 @@
+<img width="20" height="20" alt="1_y6zvdl68fA-5nd9v-StFMg" src="https://github.com/user-attachments/assets/9b88c4a8-9659-4022-a5bc-320ae90777e7" />
 # DataSciencePortfolio
 Allison Haynes
 Data Science Student  

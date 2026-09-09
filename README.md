@@ -27,7 +27,7 @@ www.linkedin.com/in/allison-haynes-86942a38a
 
 
 body {
-  background-image: url("C:\Users\allis\Downloads\8090018.jpg");
+  background-image: url('C:\Users\allis\Downloads\8090018.jpg');
   background-size: cover;
   background-position: center;
 }

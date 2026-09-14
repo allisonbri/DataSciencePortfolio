@@ -19,6 +19,8 @@ This website will document my learning and projects throughout the semester.
 
 ***
 
+[Resume](DataScienceResume.html)
+
 [Projects]()
 
 

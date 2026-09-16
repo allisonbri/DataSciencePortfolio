@@ -1,6 +1,6 @@
 # My Projects
 
-[Project1](Project1.ipynb)
+[Project1](Untitled-1.ipynb)
 Explores how the usage of different forms of transportation in North Carolina counties affects the amount of recorded art museums in the area
 
 Is there a relationship between the percentage of households using cars for transportation and the percentage of museums classified as art museums in North Carolina counties?

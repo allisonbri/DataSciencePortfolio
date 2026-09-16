@@ -23,8 +23,7 @@ This website will document my learning and projects throughout the semester.
 
 ***
 
-[Projects](https://docs.google.com/document/d/1ztdM5yhMdQefVbb-t7gkjEV9LUQShXPMaCkDpBHlPBI/edit?tab=t.0)
-
+[Projects](Projects.md)
 
 
 

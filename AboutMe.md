@@ -1,10 +1,4 @@
-Background
-
-Experience
-
-Career Goals
-
-About Me
+# About Me
 
 I am a UNC Charlotte student pursuing a Bachelor of Science in Data Science. I am passionate about building my technical skills, exploring data, and learning through new experiences and challenges. I enjoy finding ways to understand information, recognize patterns, and use problem-solving to make sense of complex topics.
 

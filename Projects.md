@@ -40,7 +40,11 @@ Art museum is defined as the museum database labels the museums, it is not based
 Concept: How much workers in a county walk rather than rely on other modes of transportation.  
 Measure: Number of workers who walk to work  
 
-Controls: population density
+Controls: population density  
+
+**Data Cleaning Process**  
+
+goes here  
 
 **Findings:**  
 
@@ -57,4 +61,7 @@ We are missing some possible confounding variables like tourism and county land 
 **Sources**  
 Bingham-Hall, J., & Kaasa, A. (2011). New cultural infrastructure: Can we design the conditions for culture?  
 Smith, J. K. (2014). The museum effect: How museums, libraries, and cultural institutions educate and civilize society. Bloomsbury Publishing PLC.  
-Teuguia, F. (2025). Navigating the legal landscape of APIs: Innovations, strategies for sustainable, inclusive, and secure digital ecosystems. World Futures, 81(4), 255-290.
+Teuguia, F. (2025). Navigating the legal landscape of APIs: Innovations, strategies for sustainable, inclusive, and secure digital ecosystems. World Futures, 81(4), 255-290.  
+Anthropic. (2026). Claude Sonnet 5 [Large language model]. https://claude.ai  
+Artificial Intelligence was used to help create a csv dataset from the museum database website.  
+

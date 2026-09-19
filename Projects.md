@@ -1,40 +1,43 @@
 # My Projects
+<ins>**Transportation and Art Museums in North Carolina Counties**</ins> ~
+[Link to code](PortfolioProject1.ipynb)
 
-[Project1](Untitled-1.ipynb)
-Explores how the usage of different forms of transportation in North Carolina counties affects the amount of recorded art museums in the area
+**Overview**  
+This project examines whether transportation patterns are related to the types of museums found in North Carolina counties. Using county-level data, it compares how residents commute (for example, by car, public transit, walking, or biking) with the percentage of each county's museums that are classified as art museums. The goal is to see whether counties dominated by a particular mode of transportation tend to have a higher or lower share of art museums.  
+**Research Question and dataset:**  
 
-Is there a relationship between the percentage of households using cars for transportation and the percentage of museums classified as art museums in North Carolina counties?
+Is there a relationship between the most common mode of transportation used in different North Carolina counties and the percentage of museums in those counties that are classified as art museums?  
 
-Bias:Population size: Larger counties may have more cars and more museums.
+https://api.census.gov/data/2024/acs/acs1?get=NAME,B01001_001E&for=county:*&in=state:37&key={api_key}  
+Unit of analysis: county  
+44 rows and 8 columns used with 26 missing values in columns: Total_Transp_By_Vehicles_Available	Total_Public_Transp	No_Vehicle_Available    and   Walks  
+https://museumsdatabase.com/  
+Anthropic. (2026). Claude Sonnet 5 [Large language model]. https://claude.ai  
+Artificial Intelligence was used to help create a csv dataset from the museum database website.  
+Unit of analysis: county  
+44 rows and 3 columns: percent_art_museum        museum_count	art_museum_count  
 
-Population density: Urban counties may have more public transportation, museums, and cultural attractions.
+**Context:**  
+Museum types may reflect the character of the communities around them. Counties where nearly everyone drives tend to be rural or suburban, while counties with more transit, walking, or biking tend to be denser and more urban, where arts institutions are often concentrated. This project asks whether car reliance is associated with the share of a county's museums that are art museums. The analysis is correlational and cannot show causation.  
 
-Tourism levels: Tourist-heavy counties may have more museums and higher transportation activity.
+Key Variables  
 
-Median income: Wealthier counties may have more vehicle ownership and greater funding for cultural institutions.
+Car usage (independent)  
 
-Education levels: Counties with higher education levels may have greater interest in museums and arts.
+Concept: How much a county's residents rely on private cars rather than other modes of transportation.  
+Measure: Percentage of workers who commute by car, truck, or van [add data source and year].  
 
-Urban versus rural location: Urban areas often have more cultural institutions and different transportation patterns.
+Percentage of art museums (dependent)  
 
-County land area: Larger counties may require more driving and may have museums spread farther apart.
+Concept: How strongly a county's museums lean toward art rather than other types.  
+Measure: (art museums ÷ total museums) × 100  
+Art museum is defined as the museum database labels the museums, it is not based on the name of the museum.  
+Controls: population density, median household income, and percentage of adults with a bachelor's degree, all at the county level.  
 
-Arts and culture funding: Local government or private funding could influence the number and types of museums.
+**Ethics and Limitations:**  
+We are missing some possible confounding variables like tourism and county land area which could skew our results or leave aspects unaccounted for. There is also a large amount of missing values in the data which could be indicative of a possible sampling bias and therefore may be skewing the findings. As well there are some major outliers as seen in the visualizations that the conclusion does not address.  
 
-
-Variables:
-
-Car usage: How much people in a county rely on cars for transportation.
-
-Percentage of art museums: The proportion of museums in a county that are classified as art museums.
-
-Car usage: Measured as the percentage of workers in each North Carolina county who commute by car, if that is what your dataset provides.
-
-Percentage of art museums: Calculated by dividing the number of art museums in a county by the total number of museums in that county, then multiplying by 100.
-
-This project examines whether transportation patterns are related to the types of museums found in North Carolina counties. Specifically, it explores whether counties with higher levels of car usage have a different percentage of art museums compared with counties with lower levels of car usage. The project will compare county-level data to identify possible patterns or relationships between transportation and cultural institutions.
-
-sources
-Bingham-Hall, J., & Kaasa, A. (2011). New cultural infrastructure: Can we design the conditions for culture.
-Smith, J. K. (2014). The museum effect: How museums, libraries, and cultural institutions educate and civilize society. Bloomsbury Publishing PLC.
+**Sources**  
+Bingham-Hall, J., & Kaasa, A. (2011). New cultural infrastructure: Can we design the conditions for culture?  
+Smith, J. K. (2014). The museum effect: How museums, libraries, and cultural institutions educate and civilize society. Bloomsbury Publishing PLC.  
 Teuguia, F. (2025). Navigating the legal landscape of APIs: Innovations, strategies for sustainable, inclusive, and secure digital ecosystems. World Futures, 81(4), 255-290.

@@ -20,7 +20,7 @@ Unit of analysis: county
 44 rows and 3 columns: percent_art_museum        museum_count	art_museum_count  
 
 **Context:**  
-Museum types may reflect the character of the communities around them. Counties where nearly everyone drives tend to be rural or suburban, while counties with more transit, walking, or biking tend to be denser and more urban, where arts institutions are often concentrated. This project asks whether car reliance is associated with the share of a county's museums that are art museums. The analysis is correlational and cannot show causation.  
+Museum types may reflect the character of the communities around them. Counties where nearly everyone drives tend to be rural or suburban, while counties with more transit or walking tend to be denser and more urban, where arts institutions are often concentrated. This project asks whether car reliance is associated with the share of a county's museums that are art museums. The analysis is correlational and cannot show causation.  
 
 <ins>Key Variables</ins>  
 

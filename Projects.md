@@ -40,11 +40,12 @@ Art museum is defined as the museum database labels the museums, it is not based
 Concept: How much workers in a county walk rather than rely on other modes of transportation.  
 Measure: Number of workers who walk to work  
 
-Controls: population density, median household income, and percentage of adults with a bachelor's degree, all at the county level.
+Controls: population density
 
 **Findings:**  
 
-<img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/345c4419-53c4-4d90-a37e-6360b48547e8" /> <img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/eea22c69-3f2a-46f1-b954-08de4ddffadf" /> <img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/57541c95-ce15-4d72-9353-0077564531d4" />
+<img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/345c4419-53c4-4d90-a37e-6360b48547e8" /> <img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/eea22c69-3f2a-46f1-b954-08de4ddffadf" /> <img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/57541c95-ce15-4d72-9353-0077564531d4" /> <img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/ed397797-09f5-4444-9ce3-89c50d8ffca5" />
+
 
 There is an indirect relationship, however there is not a strong direct correlation. The amount of art museums in a county appears to be more related to population size rather than transportation method. This result is likely due to the size of counties and its relationship with funding and tourism.
 

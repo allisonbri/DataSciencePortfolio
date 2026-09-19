@@ -34,6 +34,14 @@ Measure: (art museums ÷ total museums) × 100
 Art museum is defined as the museum database labels the museums, it is not based on the name of the museum.  
 Controls: population density, median household income, and percentage of adults with a bachelor's degree, all at the county level.  
 
+**Findings:**  
+
+<img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/345c4419-53c4-4d90-a37e-6360b48547e8" /> <img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/eea22c69-3f2a-46f1-b954-08de4ddffadf" /> <img width="310" height="280" alt="image" src="https://github.com/user-attachments/assets/57541c95-ce15-4d72-9353-0077564531d4" />
+
+
+
+
+
 **Ethics and Limitations:**  
 We are missing some possible confounding variables like tourism and county land area which could skew our results or leave aspects unaccounted for. There is also a large amount of missing values in the data which could be indicative of a possible sampling bias and therefore may be skewing the findings. As well there are some major outliers as seen in the visualizations that the conclusion does not address.  
 

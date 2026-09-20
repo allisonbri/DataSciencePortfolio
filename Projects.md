@@ -2,7 +2,7 @@
 <ins>**Transportation and Art Museums in North Carolina Counties**</ins> ~
 [Link to code](PortfolioProject1.ipynb)
 
-**Overview**  
+**Overview:**  
 This project examines whether transportation patterns are related to the types of museums found in North Carolina counties. Using county-level data, it compares how residents commute (for example, by car, public transit or walking) with the percentage of each county's museums that are classified as art museums. The goal is to see whether counties dominated by a particular mode of transportation tend to have a higher or lower share of art museums.  
 
 **Research Question and dataset:**  
@@ -42,7 +42,7 @@ Measure: Number of workers who walk to work
 
 Controls: population density  
 
-**Data Cleaning Process**  
+**Data Cleaning Process:**  
 
 City base museum data collected from the museum website was grouped by county with the assistance of Claude (Anthropic, 2026) so that it could be merged with the API dataset. To make the two datasets compatible, I split the NAME column in the API data so its values matched the county names in the museum CSV. Then I filtered the museum data to only keep the counties present in the API data, so both datasets contained the same set of counties. Finally, I merged the datasets on county names, which produced a single table ready for plotting.  
 
@@ -58,7 +58,7 @@ There is an indirect relationship, however there is not a strong direct correlat
 **Ethics and Limitations:**  
 We are missing some possible confounding variables like tourism and county land area which could skew our results or leave aspects unaccounted for. There is also a large amount of missing values in the data which could be indicative of a possible sampling bias and therefore may be skewing the findings. As well there are some major outliers as seen in the visualizations that the conclusion does not address.  
 
-**Sources**  
+**Sources:**  
 Bingham-Hall, J., & Kaasa, A. (2011). New cultural infrastructure: Can we design the conditions for culture?  
 Smith, J. K. (2014). The museum effect: How museums, libraries, and cultural institutions educate and civilize society. Bloomsbury Publishing PLC.  
 Teuguia, F. (2025). Navigating the legal landscape of APIs: Innovations, strategies for sustainable, inclusive, and secure digital ecosystems. World Futures, 81(4), 255-290.  

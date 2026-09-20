@@ -44,7 +44,7 @@ Controls: population density
 
 **Data Cleaning Process**  
 
-goes here  
+City base museum data collected from the museum website was grouped by county with the assistance of Claude (Anthropic, 2026) so that it could be merged with the API dataset. To make the two datasets compatible, I split the NAME column in the API data so its values matched the county names in the museum CSV. Then I filtered the museum data to only keep the counties present in the API data, so both datasets contained the same set of counties. Finally, I merged the datasets on county names, which produced a single table ready for plotting.  
 
 **Findings:**  
 

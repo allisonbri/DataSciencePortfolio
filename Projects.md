@@ -1,6 +1,17 @@
 # My Projects
-<ins>**Transportation and Art Museums in North Carolina Counties**</ins> ~
-[Link to code](PortfolioProject1.ipynb)
+
+<p>
+  
+  <ins>**Transportation and Art Museums in North Carolina Counties**</ins>
+  
+  This project examines whether transportation patterns are related to the types of museums found in North Carolina counties. Using county-level data, it compares how residents commute (for example, by car, public transit or walking) with the percentage of each county's museums that are classified as art museums. The goal is to see whether counties dominated by a particular mode of transportation tend to have a higher or lower share of art museums.  
+</p>
+
+<details>
+  <summary>Read more</summary>
+  <p>
+
+[Link to code](PortfolioProject1.ipynb)  
 
 **Overview:**  
 This project examines whether transportation patterns are related to the types of museums found in North Carolina counties. Using county-level data, it compares how residents commute (for example, by car, public transit or walking) with the percentage of each county's museums that are classified as art museums. The goal is to see whether counties dominated by a particular mode of transportation tend to have a higher or lower share of art museums.  
@@ -64,4 +75,8 @@ Smith, J. K. (2014). The museum effect: How museums, libraries, and cultural ins
 Teuguia, F. (2025). Navigating the legal landscape of APIs: Innovations, strategies for sustainable, inclusive, and secure digital ecosystems. World Futures, 81(4), 255-290.  
 Anthropic. (2026). Claude Sonnet 5 [Large language model]. https://claude.ai  
 Artificial Intelligence was used to help create a csv dataset from the museum database website.  
+
+</p>
+</details>
+
 

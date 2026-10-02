@@ -3,7 +3,7 @@
   **<ins>Transportation and Art Museums in North Carolina Counties</ins>**
   
   This project examines whether transportation patterns are related to the types of museums found in North Carolina counties. Using county-level data, it compares how residents commute (for example, by car, public transit or walking) with the percentage of each county's museums that are classified as art museums. The goal is to see whether counties dominated by a particular mode of transportation tend to have a higher or lower share of art museums.  
-</p>
+
 
 <details markdown="1">
   <summary>Read more</summary>
@@ -77,3 +77,23 @@ Artificial Intelligence was used to help create a csv dataset from the museum da
 </details>
 
 
+
+
+  
+  **<ins>Predicting User Ratings with Machine Learning</ins>**
+  
+  I trained two machine learning models to predict the average user rating of 1,982 top-ranked board games from BoardGameGeek, using only basic facts about each game: how complex it is, how long it takes, how many people can play, and when it was published. Both models beat a "just guess the average" baseline by a wide margin and explain about 40% of the differences in ratings. Complexity and release year mattered most. The remaining 60% comes from things this dataset does not contain, such as theme, artwork, and the quality of the rules.  
+
+
+<details markdown="1">
+  <summary>Read more</summary>
+
+[Link to code](PortfolioProject2.ipynb)  
+
+**Overview:**  
+I trained two machine learning models to predict the average user rating of 1,982 top-ranked board games from BoardGameGeek, using only basic facts about each game: how complex it is, how long it takes, how many people can play, and when it was published. Both models beat a "just guess the average" baseline by a wide margin and explain about 40% of the differences in ratings. Complexity and release year mattered most. The remaining 60% comes from things this dataset does not contain, such as theme, artwork, and the quality of the rules.  
+
+**Research Question and dataset**  
+Can a board game's basic characteristics predict how highly its players rate it?
+
+</details>

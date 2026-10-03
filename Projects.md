@@ -1,12 +1,12 @@
 # My Projects
   
-  **<ins>Transportation and Art Museums in North Carolina Counties</ins>**
+##  **<ins>Transportation and Art Museums in North Carolina Counties</ins>**
   
   In this project I examine whether transportation patterns are related to the types of museums found in North Carolina counties. Using county-level data, I compare how residents commute (for example, by car, public transit or walking) with the percentage of each county's museums that are classified as art museums. The goal is to see whether counties dominated by a particular mode of transportation tend to have a higher or lower share of art museums.  
 
 
 <details markdown="1">
-  <summary>Read more</summary>
+  <summary>Read more</summary>  
 
 [Link to code](PortfolioProject1.ipynb)  
 
@@ -74,31 +74,36 @@ Anthropic. (2026). Claude Sonnet 5 [Large language model]. https://claude.ai
 Artificial Intelligence was used to help create a csv dataset from the museum database website.  
 
 
-</details>
+</details>  
 
 
 
 
   
-  **<ins>Predicting User Ratings with Machine Learning</ins>**
+##  **<ins>Predicting User Ratings with Machine Learning</ins>**  
+  
   I trained two machine learning models to predict the average user rating of 1,982 top-ranked board games from BoardGameGeek, using only how complex it is, how long it takes, how many people can play, and when it was published. Both the Linear Regression model and the Decision Tree were able to beat a "just guess the average" baseline by a wide margin and explain about 40% of the differences in ratings.  
 
 
 <details markdown="1">
-  <summary>Read more</summary>
+  <summary>Read more</summary>  
 
+\
 [Link to code](PortfolioProject2.ipynb)  
 
-**Overview:**  
+### **Overview:**  
+
   I trained two machine learning models to predict the average user rating of 1,982 top-ranked board games from BoardGameGeek, using only basic facts about each game: how complex it is, how long it takes, how many people can play, and when it was published. Both models beat a "just guess the average" baseline by a wide margin and explain about 40% of the differences in ratings. Complexity and release year mattered most. The remaining 60% comes from things this dataset does not contain, such as theme, artwork, and the quality of the rules.  
 
-**Research Question and dataset:**  
+
+### **Research Question and dataset:**  
+
 Can a board game's basic characteristics predict how highly its players rate it?  
 
 Target variable: avg_rating; the average score (on a 1 to 10 scale) that BoardGameGeek users give a game.  
 
-*Data Description*  
-Source: [BoardGameGeek data from Kaggle](https://www.kaggle.com/datasets/mattadamhouser/ranked-board-game-data-from-boardgamegeek)
+**Data Description:**  
+Source: [BoardGameGeek data from Kaggle](https://www.kaggle.com/datasets/mattadamhouser/ranked-board-game-data-from-boardgamegeek)  
 Unit of analysis: Each row is information on 1 board game  
 Size: 2,000 rows and 17 columns. The file contains the *top* 2,000 ranked games, not every game on the site.  
 Target: avg_rating.  
@@ -107,108 +112,110 @@ Missing values: Only designer has missing values (3 rows), and I do not use it. 
 Restrictions that affect the data: Because only the top 2,000 games are included, ratings are squeezed into a narrow range. The raters are self-selected BGG members. The dataset has no information on theme, mechanics, artwork, price, or component count.  
 
 
-
-<ins>Features included and excluded:</ins>  
-
-Included:  
+**Features included and excluded:**  
+*Included:*  
 weight, log_time, min_players, max_players_capped, year.  
 
-Excluded, and why:  
+*Excluded, and why:*  
 geek_rating and rank are calculated from the rating itself. Using them would hand the model the answer.  
-num_votes and owned measure how popular a game became after release. They are address how the game was received, not traits of the game.  
+num_votes and owned measure how popular a game became after release. Address how the game was received, not traits of the game.  
 min_time, and max_time: in this file avg_time and max_time are identical, so I use only the log of avg_time.  
 name, bgg_url, game_id, and designer are identifiers, not game traits.  
 age (recommended minimum age) was left out to keep the model simple and focused on the four traits in my question. Could look into it for further analysis.  
 
-**Context:**  
 
-Why it matters:  
-Making a board game takes a lot of time and money, and ratings strongly influence what gets bought and talked about. Knowing which measurable traits go along with high ratings, and just as importantly how much of a rating they can explain, tells us how far the numbers alone can take us before judgment, taste, and playtesting have to take over.  
 
-Who might benefit:  
+### **Context:**  
+
+**Why it matters:**  
+Making a board game takes a lot of time and money, and ratings influence what gets bought or talked about. Knowing which traits go along with high ratings, and how much of a rating they can explain, tells us how far the numbers take us before judgment, taste, and testing have to take over.  
+
+**Who might benefit:**  
 Game designers and publishers deciding what kind of game to develop.  
 Players and retailers trying to guess whether an unfamiliar game will be well received.  
 Students of data science (like me), since a rating model is a good, low-stakes setting for practicing the full machine learning workflow.  
 
-What to know:  
+**What to know:**  
 BoardGameGeek (BGG) users rate games from 1 to 10 and also rate their weight 1 to 5 for how complex a game is (1 is light, like a family game; 5 is very intricate). A data analysis of BGG by Vatvani (n.d.) found a clear positive relationship between complexity and rating. The author addresses that this does not mean complex games are inherently better, because complex games specifically appeal to the kind of person who uses BGG. My results below show the same pattern, so we should treat it as more of a feature of this community, not as a causational relationship.  
 
+  
 
-**Data Cleaning:**  
+### **Data Cleaning:**  
  
-Removed games with avg_time == 0 or max_players == 0   ->   A playtime or player count of zero means "unknown," not zero.  
-Kept only games published in 1950 or later    ->    Ancient games such as Go and Chess don't have a meaningful publication year, and a value like -2200 would distort a model looking for straight-line patterns.  
-Log-transformed playtime (log_time)    ->    Playtime is so skewed that a few 10,000-minute games would dominate. The logarithm pulls extremes in and keeps the order of games.  
-Capped max players at 10 (max_players_capped)    ->    A few games list up to 100 players, which would pull the model toward those extreme outliers.  
+- Removed games with avg_time == 0 or max_players == 0  
+*A playtime or player count of zero means "unknown," not zero.*  
+- Kept only games published in 1950 or later  
+*Ancient games such as Go and Chess don't have a meaningful publication year, and a value like -2200 would distort a model looking for straight-line patterns.*  
+- Log-transformed playtime (log_time)  
+*Playtime is so skewed that a few 10,000-minute games would dominate. The logarithm pulls extremes in and keeps the order of games.*  
+- Capped max players at 10 (max_players_capped)  
+*A few games list up to 100 players, which would pull the model toward those extreme outliers.*  
 
 In total, 18 of 2,000 games were removed (1,982 remain). No categorical variables needed encoding, and I did not scale features because the model I will be using does not require it.  
 
 
-**Data Exploration:**  
+### **Data Exploration:**  
 
-Summary Stats after data cleaning:  
+*Summary Stats after data cleaning:*  
 
-<img width="250" height="111" alt="CleanSummaryStatsProject2" src="https://github.com/user-attachments/assets/21669753-dafe-4380-9487-40b3ed007387" />  
+<img width="550" height="300" alt="CleanSummaryStatsProject2" src="https://github.com/user-attachments/assets/21669753-dafe-4380-9487-40b3ed007387" />  
 
 Ratings cluster around 7.37. Because the file contains only top-ranked games, there are almost no poorly rated games, and the entire spread is about 2.7 rating points. This range does make small differences between games harder to predict, and any relationship I find is probably weaker than it would be across all board games. A standard deviation of only 0.44 also gives me a useful information for judging prediction errors later.  
 
 
-<ins>Observing Relationships</ins>
+**Observing Relationships**
 
-<img width="400" height="284" alt="image" src="https://github.com/user-attachments/assets/7570dc4b-948a-412e-bc2f-91dce0a317da" />  
+<img width="550" height="480" alt="image" src="https://github.com/user-attachments/assets/7570dc4b-948a-412e-bc2f-91dce0a317da" />  
 
 From the graphs we can observe that complexity vs rating and year vs rating appear to have the strongest positive linear relationships. Playtime vs rating has a subtle positive linear relationship and minimum players vs rating appears to have a negative linear relationship.  
 
 
-I used Spearman correlation because it handles curved relationships and outliers better than the more common Pearson version. Here are my results:  
+I used Spearman correlation because it handles curved relationships and outliers better than the more common Pearson version.  
 
-<img width="350" height="101" alt="image" src="https://github.com/user-attachments/assets/3476fe1f-9289-4f1c-a2c5-65ea07daa723" />  
+<img width="590" height="160" alt="image" src="https://github.com/user-attachments/assets/3476fe1f-9289-4f1c-a2c5-65ea07daa723" />  
 
 
-What stands out:
-
+**What stands out**  
 Complex games are rated higher. Newer games are rated higher. Games that need more players at minimum are rated lower, and games that can be played solo or by one person score a little higher. Complexity and playtime overlap heavily (correlation 0.83 between them): long games tend to be heavy games. This multicollinearity may make it hard for the model to say which of the two is affecting the rating score. Year is nearly independent of complexity (about -0.01) and of playtime (about -0.02). So year is not just a stand-in for complexity, it adds separate information.  
 
-**Training Strategy:**  
+
+### **Training Strategy:**  
 
 80/20 split. I trained on 1,585 games and set aside 397 games as a test set. Scoring on the held-out games tells us how the model would do on games it hasn't seen.  
 Shuffled split. The file is sorted by rank, so an unshuffled split would put mostly top-ranked games in one group.  
 Cross-validation. To choose the decision tree's depth, I used 5-fold cross-validation on the training set only: the training data is cut into five parts, the model trains on four and is scored on the fifth, and this rotates five times.  
 Preventing data leakage. The test set was never used to make a modeling decision. Depth was chosen using only training data. While cleaning the data I removed placeholder rows, capped values, and log transformed necessary columns.  
 
-**Model Development:**  
+### **Model Development:**  
 
-Baseline: The baseline predicts the average training rating (7.37) for every game  
+**Baseline:** The baseline predicts the average training rating (7.37) for every game  
 
-Model 1: Linear regression. It fits the best straight-line formula, rating = intercept + (c1 × weight) + (c2 × log_time) + .... I chose it because it is the standard first regression model and its coefficients have plain-language meanings. Its limitation is that it assumes every effect is a straight line.   
+**Model 1:** Linear regression. It fits the best straight-line formula, rating = intercept + (c1 × weight) + (c2 × log_time) + .... I chose it because it is the standard first regression model and its coefficients have plain-language meanings. Its limitation is that it assumes every effect is a straight line.   
 
-Model 2: Decision tree. It splits games into groups with yes/no questions (for example "is weight above 2.8?") and predicts the average rating of each final group. I chose it because it works very differently from linear regression, so comparing them answers whether the relationship is mostly straight lines, or if flexibility helps? It can capture curves and interactions automatically. Its limitation is overfitting.  
+**Model 2:** Decision tree. It splits games into groups with yes/no questions (for example "is weight above 2.8?") and predicts the average rating of each final group. I chose it because it works very differently from linear regression, so comparing them answers whether the relationship is mostly straight lines, or if flexibility helps? It can capture curves and interactions automatically. Its limitation is overfitting.  
 
-Fairness of the comparison: both models used the same training and test games, the same five features, and the same three metrics.  
+**Fairness of the comparison:** both models used the same training and test games, the same five features, and the same three metrics.  
 
-Metrics  
+**Metrics:**  
 R² is the share of the differences in ratings that the model explains. A score of 0 means no better than guessing the average, and 1 means perfect.  
-MAE (mean absolute error) is the average size of the miss, in rating points. It is the easiest to explain to a non-technical reader.  
+MAE (mean absolute error) is the average size of the miss, in rating points.  
 RMSE (root mean squared error) is similar but punishes big misses more heavily, also in rating points.  
 
 These fit a regression problem with a continuous target.  
 
-**Results:**  
-
-Results on the test set (397 games):  
-Model                    R²            MAE            RMSE  
-Baseline(average)	      -0.003	       0.362	        0.453  
-Linear regression	      0.399	         0.280	        0.351  
-Decision tree(depth 5)	0.423	         0.278	        0.344  
+### **Results:**  
 
 
-<img width="400" height="161" alt="image" src="https://github.com/user-attachments/assets/b05b86d3-24ea-49d4-b5da-8a5e5379f7f8" />  
+<img width="270" height="110" alt="image" src="https://github.com/user-attachments/assets/42d2ac68-7901-4d58-b318-37857fae1ff5" />  
+
+\
+<img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/b05b86d3-24ea-49d4-b5da-8a5e5379f7f8" />  
 
 
 Both models clearly beat the baseline. R² rises from about 0 to about 0.40, and the average misses falls from 0.36 to 0.28 rating points. The fact that the decision tree barely beats a straight-line model suggests the relationships in this data are mostly linear. Most of what the features can explain, both models find.  
 
 
-What the linear model learned:  
+**What the linear model learned:**  
 Complexity (weight)	+0.219	Each extra point of complexity goes with a rating about 0.22 points higher  
 Year +0.019	Each year later goes with about 0.02 points higher  
 Playtime (log_time)	+0.095	Doubling playtime goes with about 0.07 points higher  
@@ -216,29 +223,27 @@ Min players	-0.019	Essentially no effect
 Max players (capped)	-0.005	Essentially no effect  
 
 
-The tree agrees:  
-complexity (57%) and year (39%) account for almost all of its predictive power, with playtime at 1%, max players at 2.5%, and min players at 0.2%. Playtime looks important in the correlation table (0.47) but contributes little once complexity is known, because the two overlap so much (0.83).  
+**The tree agrees:**  
+Complexity (57%) and year (39%) account for almost all of its predictive power, with playtime at 1%, max players at 2.5%, and min players at 0.2%. Playtime looks important in the correlation table (0.47) but contributes little once complexity is known, because the two overlap so much (0.83).  
 
-**Where the model struggles:**  
+### **Where the model struggles:**  
 
 The model plays it safe. Games rated above 8.0 were underestimated by an average of 0.53 points, and games rated below 6.8 were overestimated by an average of 0.37 points. Mid-range games (7.2 to 7.6) were predicted almost perfectly on average (error about 0.02). The model has learned the typical game but cannot recognize the extraordinary ones.  
 
-The biggest misses:  
+*The biggest misses:*  
 
-<img width="410" height="200" alt="image" src="https://github.com/user-attachments/assets/e7fde7ef-dff5-4016-8e36-df1e8cce23f2" />  
+<img width="550" height="290" alt="image" src="https://github.com/user-attachments/assets/e7fde7ef-dff5-4016-8e36-df1e8cce23f2" />  
 
-Several of the high misses are recent, large-scale, campaign-style games, which may attract more fan groups. Several of the low misses are older, mass-market, or licensed games that are well known and widely played, so their ratings may reflect disappointment or a broader audience than the typical BGG rater.  
+Several of the high misses are recent, large-scale, campaign-style games, which may attract more fan groups. Several of the low misses are older, mass-market, or licensed games that are well known and widely played, so their ratings may reflect disappointment or a broader audience than the typical BGG rater. The model leaves out theme, fan community, art, price, component count, and rules quality which could explain some outliers in the data and the majorly missed predictions.  
 
-The model leaves out theme, fan community, art, price, component count, and rules quality which could explain some outliers in the data and the majorly missed predictions.  
+### **Model Conclusion:**  
 
-**Model Conclusion:**  
-
-Can conclude:  
+**Can conclude:**  
 
 Complexity and release year are the two most useful predictors in this dataset, and playtime and player counts add a little once those two are known.
 The five basic features together explain roughly 40% of the variation in ratings among top-ranked games.  
 
-Cannot conclude:  
+**Cannot conclude:**  
 
 - That making a game more complex will cause a higher rating. This is an association. The BGG audience likes complex games, so complexity and rating rise together for this audience.  
 - That these patterns hold for all board games, for casual players, or for games outside the top 2,000.  
@@ -247,32 +252,32 @@ Cannot conclude:
 
 So before relying on this model know that it predicts how BoardGameGeek hobbyists rate highly ranked games, using five basic traits. It describes patterns, it does not prove causes, and its errors are largest for the very best and very worst games.  
 
-**Ethics and limitations:**  
+### **Ethics and limitations:**  
 
-Biases and gaps in the data:  
+**Biases and gaps in the data:**  
 Selected sample. Only the top 2,000 ranked games are included, so poorly rated games are missing. This compresses the range of ratings and likely understates how much these features matter in general.  
 Self-selected raters. BGG users are not just the general public. Self-selection can make average ratings a poor approximation for actual quality.
 Complexity is itself a rating. weight is a score given by users, not a measurement, so it reflects opinion and experience.  
 Missing information. No theme, mechanics, artwork, price, or component count, which probably explain a large amount of the remaining 60% of unexplained variation.  
 
 
-Who could be affected by wrong predictions, and how?  
+**Who could be affected by wrong predictions, and how?**  
 A publisher or designer who relied on the model could under-invest in a game that would be a hit (like Oathsworn, which the model underestimates by more than a full point) or over-invest in one that would disappoint (like Axis & Allies, which it overestimates).  
 A model that rewards complexity could nudge designers toward heavier games, even though the wider public may prefer lighter ones.  
 Consumers would be misled if the predicted rating were treated as a quality guarantee.  
 Because the model pulls predictions toward the middle, it is the worst for deciding the games people care about most: the major hits and the disappointments.  
 
-Is it appropriate for real-world decisions?  
+**Is it appropriate for real-world decisions?**  
 No, not on its own. A typical error of 0.28 points is large compared with the 0.44-point spread of ratings, and the model cannot see most of what makes a game good. It is reasonable as a rough starting point for discussion or as some input but not as a tool for deciding which games to publish or buy.  
 
 
-Next steps I would explore:  
+**Next steps I would explore:**  
 Add game mechanics, categories, and themes and test whether they explain the missing 60%.  
 Include games outside the top 2,000 so the full range of ratings is shown.  
 Add the recommended minimum age and test interactions like complexity × year.  
 Try other models such as random forests or gradient boosting.  
 
-**References:**
+### **References:**
 BoardGameGeek. (n.d.). BoardGameGeek. https://boardgamegeek.com
 * Fill in the author , year, and the page where I downloaded the file,  
 ex: Author/Organization. (Year). basic_data_2023.csv [Data set]. Publisher or site. URL  

@@ -1,4 +1,5 @@
-# My Projects
+# My Projects  
+
   
 ##  **<ins>Transportation and Art Museums in North Carolina Counties</ins>**
   
@@ -78,7 +79,6 @@ Artificial Intelligence was used to help create a csv dataset from the museum da
 </details>  
 
 <pre>
-
 
 </pre>
   
@@ -298,3 +298,6 @@ Vatvani, D. (n.d.). Complexity bias in ratings [Blog post]. https://dvatvani.git
 Wachs, J., & Vedres, B. (2021). Does crowdfunding really foster innovation? Evidence from the board game industry. Technological Forecasting and Social Change, 168, Article 120747. https://ideas.repec.org/a/eee/tefoso/v168y2021ics0040162521001797.html
 
 </details>
+<pre>
+
+</pre>

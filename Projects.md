@@ -7,6 +7,7 @@
 
 <details markdown="1">
   <summary>Read more</summary>  
+  
 
 [Link to code](PortfolioProject1.ipynb)  
 
@@ -76,9 +77,10 @@ Artificial Intelligence was used to help create a csv dataset from the museum da
 
 </details>  
 
+<pre>
 
 
-
+</pre>
   
 ##  **<ins>Predicting User Ratings with Machine Learning</ins>**  
   
@@ -88,7 +90,8 @@ Artificial Intelligence was used to help create a csv dataset from the museum da
 <details markdown="1">
   <summary>Read more</summary>  
 
-\
+
+
 [Link to code](PortfolioProject2.ipynb)  
 
 ### **Overview:**  
@@ -158,7 +161,7 @@ In total, 18 of 2,000 games were removed (1,982 remain). No categorical variable
 
 *Summary Stats after data cleaning:*  
 
-<img width="550" height="300" alt="CleanSummaryStatsProject2" src="https://github.com/user-attachments/assets/21669753-dafe-4380-9487-40b3ed007387" />  
+<img width="550" height="250" alt="CleanSummaryStatsProject2" src="https://github.com/user-attachments/assets/21669753-dafe-4380-9487-40b3ed007387" />  
 
 Ratings cluster around 7.37. Because the file contains only top-ranked games, there are almost no poorly rated games, and the entire spread is about 2.7 rating points. This range does make small differences between games harder to predict, and any relationship I find is probably weaker than it would be across all board games. A standard deviation of only 0.44 also gives me a useful information for judging prediction errors later.  
 
@@ -208,7 +211,8 @@ These fit a regression problem with a continuous target.
 
 <img width="270" height="110" alt="image" src="https://github.com/user-attachments/assets/42d2ac68-7901-4d58-b318-37857fae1ff5" />  
 
-\
+
+
 <img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/b05b86d3-24ea-49d4-b5da-8a5e5379f7f8" />  
 
 
@@ -278,7 +282,8 @@ Add the recommended minimum age and test interactions like complexity × year.
 Try other models such as random forests or gradient boosting.  
 
 ### **References:**
-BoardGameGeek. (n.d.). BoardGameGeek. https://boardgamegeek.com
+BoardGameGeek. (n.d.). BoardGameGeek. https://boardgamegeek.com  
+
 * Fill in the author , year, and the page where I downloaded the file,  
 ex: Author/Organization. (Year). basic_data_2023.csv [Data set]. Publisher or site. URL  
 

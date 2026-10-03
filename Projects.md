@@ -279,21 +279,18 @@ Include games outside the top 2,000 so the full range of ratings is shown.
 Add the recommended minimum age and test interactions like complexity × year.  
 Try other models such as random forests or gradient boosting.  
 
-### **References:**
-BoardGameGeek. (n.d.). BoardGameGeek. https://boardgamegeek.com  
+### **References:**  
 
-* Fill in the author , year, and the page where I downloaded the file,  
-ex: Author/Organization. (Year). basic_data_2023.csv [Data set]. Publisher or site. URL  
+Matt Adam-Houser. (2023). Ranked Board Game Data from BoardGameGeek. https://www.kaggle.com/datasets/mattadamhouser/ranked-board-game-data-from-boardgamegeek  
 
-Hu, N., Zhang, J., & Pavlou, P. A. (2009). Overcoming the J-shaped distribution of product reviews. Communications of the ACM, 52(10), 144-147. https://doi.org/10.1145/1562764.1562800
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825-2830.  
 
-James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). An introduction to statistical learning: With applications in R (2nd ed.). Springer. https://doi.org/10.1007/978-1-0716-1418-1
+Vatvani, D. (n.d.). Complexity bias in ratings [Blog post]. https://dvatvani.github.io/BGG-Analysis-Part-2.html  
 
-Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, E. (2011). Scikit-learn: Machine learning in Python. Journal of Machine Learning Research, 12, 2825-2830.
+Wachs, J., & Vedres, B. (2021). Does crowdfunding really foster innovation? Evidence from the board game industry. Technological Forecasting and Social Change, 168, Article 120747. https://ideas.repec.org/a/eee/tefoso/v168y2021ics0040162521001797.html  
 
-Vatvani, D. (n.d.). Complexity bias in ratings [Blog post]. https://dvatvani.github.io/BGG-Analysis-Part-2.html
-
-Wachs, J., & Vedres, B. (2021). Does crowdfunding really foster innovation? Evidence from the board game industry. Technological Forecasting and Social Change, 168, Article 120747. https://ideas.repec.org/a/eee/tefoso/v168y2021ics0040162521001797.html
+Anthropic. (2026). Claude Sonnet 5 [Large language model]. https://claude.ai  
+Artificial Intelligence was used to assist in creating and interpreting the model code. All results were thoroughly scanned and adjusted to ensure no robot ignorance is present. So, any discrepancies or mistakes found in this project are human.
 
 </details>
 

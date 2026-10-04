@@ -259,10 +259,10 @@ So before relying on this model know that it predicts how BoardGameGeek hobbyist
 ### **Ethics and limitations:**  
 
 **Biases and gaps in the data:**  
-Selected sample. Only the top 2,000 ranked games are included, so poorly rated games are missing. This compresses the range of ratings and likely understates how much these features matter in general.  
-Self-selected raters. BGG users are not just the general public. Self-selection can make average ratings a poor approximation for actual quality.
+**Selected sample.** Only the top 2,000 ranked games are included, so poorly rated games are missing. This compresses the range of ratings and likely understates how much these features matter in general.  
+**Self-selected raters.** BGG users are not just the general public. Self-selection can make average ratings a poor approximation for actual quality.
 Complexity is itself a rating. weight is a score given by users, not a measurement, so it reflects opinion and experience.  
-Missing information. No theme, mechanics, artwork, price, or component count, which probably explain a large amount of the remaining 60% of unexplained variation.  
+**Missing information.** No theme, mechanics, artwork, price, or component count, which probably explain a large amount of the remaining 60% of unexplained variation.  
 
 
 **Who could be affected by wrong predictions, and how?**  

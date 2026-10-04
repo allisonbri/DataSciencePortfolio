@@ -184,10 +184,10 @@ Complex games are rated higher. Newer games are rated higher. Games that need mo
 
 ### **Training Strategy:**  
 
-80/20 split. I trained on 1,585 games and set aside 397 games as a test set. Scoring on the held-out games tells us how the model would do on games it hasn't seen.  
-Shuffled split. The file is sorted by rank, so an unshuffled split would put mostly top-ranked games in one group.  
-Cross-validation. To choose the decision tree's depth, I used 5-fold cross-validation on the training set only: the training data is cut into five parts, the model trains on four and is scored on the fifth, and this rotates five times.  
-Preventing data leakage. The test set was never used to make a modeling decision. Depth was chosen using only training data. While cleaning the data I removed placeholder rows, capped values, and log transformed necessary columns.  
+**80/20 split.** I trained on 1,585 games and set aside 397 games as a test set. Scoring on the held-out games tells us how the model would do on games it hasn't seen.  
+**Shuffled split.** The file is sorted by rank, so an unshuffled split would put mostly top-ranked games in one group.  
+**Cross-validation.** To choose the decision tree's depth, I used 5-fold cross-validation on the training set only: the training data is cut into five parts, the model trains on four and is scored on the fifth, and this rotates five times.  
+**Preventing data leakage.** The test set was never used to make a modeling decision. Depth was chosen using only training data. While cleaning the data I removed placeholder rows, capped values, and log transformed necessary columns.  
 
 ### **Model Development:**  
 

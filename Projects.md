@@ -103,6 +103,8 @@ Can a board game's basic characteristics predict how highly its players rate it?
 
 Target variable: avg_rating; the average score (on a 1 to 10 scale) that BoardGameGeek users give a game.  
 
+The task at hand is regression because we are dealing with continuous numerical values.
+
 **Data Description:**  
 Source: [BoardGameGeek data from Kaggle](https://www.kaggle.com/datasets/mattadamhouser/ranked-board-game-data-from-boardgamegeek)  
 Unit of analysis: Each row is information on 1 board game  
